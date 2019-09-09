@@ -45,7 +45,7 @@ while True:
 		
 	cv2.imshow("Frame", frame)
 	key = cv2.waitKey(1) & 0xFF
-	
+
 	img = frame
 	if go == True:
 		gray_frame = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -69,6 +69,8 @@ while True:
 			tracker.init(frame, initBB)
 			go = False
 
+	if key == ord("q"):
+		break
 
 vs.stop()
 cv2.destroyAllWindows()
