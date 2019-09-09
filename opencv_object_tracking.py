@@ -10,6 +10,7 @@ import cv2
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 go = True
 
+# for cv2 version lower than 3.2
 #tracker = cv2.Tracker_create(args["tracker"].upper())
 tracker = cv2.TrackerKCF_create()
 
